@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="spring-boot-get-started-broken">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="context-root" value="spring-boot-get-started-broken"/>
+        <property name="java-output-path" value="/spring-boot-get-started-broken/build/classes"/>
+    </wb-module>
+</project-modules>
