@@ -1,6 +1,6 @@
 package board.service;
 
-import board.board.dto.BoardDto;
+import board.dto.BoardDto;
 import java.util.List;
 
 public interface BoardService {

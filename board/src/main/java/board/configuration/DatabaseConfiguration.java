@@ -1,7 +1,5 @@
 package board.configuration;
 
-import java.beans.ConstructorProperties;
-
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -52,7 +50,7 @@ public class DatabaseConfiguration {
 	}
 
 	@Bean
-	@ConfigurationProperties(prefic = "mybatis.configuration")
+	@ConfigurationProperties(prefix = "mybatis.configuration")
 	public org.apache.ibatis.session.Configuration mybatisConfig() {
 		return new org.apache.ibatis.session.Configuration();
 	}

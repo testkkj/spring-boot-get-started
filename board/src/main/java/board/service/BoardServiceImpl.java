@@ -1,6 +1,8 @@
-package board.board.service;
+package board.service;
 
-import board.board.dto.BoardDto;
+import board.dto.BoardDto;
+import board.mapper.BoardMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
