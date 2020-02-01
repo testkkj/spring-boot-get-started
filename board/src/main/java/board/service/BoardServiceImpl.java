@@ -9,6 +9,9 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
+	@Autowired
+	private BoardMapper boardMapper;
+
 	@Override
 	public List<BoardDto> selectBoardList() throws Exception {
 		return boardMapper.selectBoardList();
