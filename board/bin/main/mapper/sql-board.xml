@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="board.board.mapper.BoardMapper">
-<select id="selectBoardList" resultType="board.board.dto.BoardDto">
+<mapper namespace="board.mapper.BoardMapper">
+<select id="selectBoardList" resultType="board.dto.BoardDto">
 <![CDATA[
 SELECT
 board_idx,
 title,
 hit_cnt,
-DATA_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
+DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
 FROM
 t_board
 WHERE
