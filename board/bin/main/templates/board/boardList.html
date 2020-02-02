@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.tymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>board</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
@@ -37,8 +38,8 @@
                     <td colspan="4">조회된 결과가 없습니다.</td>
                 </tr>
             </tbody>
-            <a href="/board/openBoardWrite.do" class="btn">글 쓰기</a>
         </table>
+        <a href="/board/openBoardWrite.do" class="btn">글 쓰기</a>
     </div>
 </body>
 
