@@ -8,7 +8,7 @@ import lombok.Data;
  * setter의 경우 final이 아닌 필드만 생성
  */
 public class BoardDto {
-	private int boardIndx;
+	private int boardIdx;
 	private String title;
 	private String contents;
 	private int hitCnt;

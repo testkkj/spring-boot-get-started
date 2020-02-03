@@ -10,3 +10,16 @@ updater_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
 deleted_yn CHAR(1) NOT NULL DEFAULT 'N' COMMENT '삭제 여부',
 PRIMARY KEY(board_idx)
 );
+
+InSERT INTO t_board(
+    title,
+    contents,
+    creator_id,
+    created_datetime
+)
+VALUES(
+    'first title',
+    'first contents',
+    'admin',
+    NOW()
+)

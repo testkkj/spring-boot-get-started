@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.tymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
                     <td th:text="${list.boardIdx}"></td>
                     <td class="title" th:text="${list.title}"></td>
                     <td th:text="${list.hitCnt}"></td>
-                    <td th:text="${list.createDatetime}"></td>
+                    <td th:text="${list.createdDatetime}"></td>
                 </tr>
                 <tr th:unless="${#lists.size(list)}>0">
                     <td colspan="4">조회된 결과가 없습니다.</td>
