@@ -28,7 +28,7 @@ public class BoardController {
 
 	@RequestMapping("/board/openBoardWrite.do")
 	public String openBoardWrite() throws Exception{
-		return "board/boardWrite";
+		return "/board/boardWrite";
 	}
 
 	@RequestMapping("/board/insertBoard.do")
