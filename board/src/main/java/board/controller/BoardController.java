@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -37,8 +38,9 @@ public class BoardController {
 	}
 
 	@RequestMapping("/board/insertBoard.do")
-	public String insertBoard(final BoardDto board) throws Exception {
-		boardService.insertBoard(board);
+	public String insertBoard(final BoardDto board, MultipartHttpServletRequest multipartHttpServletRequest)
+			throws Exception {
+		boardService.insertBoard(board, multipartHttpServletRequest);
 		return "redirect:/board/openBoardList.do";
 	}
 

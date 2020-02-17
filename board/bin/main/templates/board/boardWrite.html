@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h2>게시판 등록</h2>
-        <form id="frm" name="frm" action="/board/insertBoard.do" method="post">
+        <form id="frm" name="frm" action="/board/insertBoard.do" method="post" enctype="multipart/form-data">
             <table class="board_detail">
                 <tr>
                     <td>제목</td>
@@ -24,6 +24,7 @@
                     </td>
                 </tr>
             </table>
+            <input type="file" name="file" id="file" multiple="multiple">
             <input type="submit" value="저장" id="submit" class="btn">
         </form>
     </div>
