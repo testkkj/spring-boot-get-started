@@ -1,9 +1,14 @@
 package board.controller;
 
+import java.io.File;
+import java.net.URLEncoder;
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 import board.dto.BoardDto;
 import board.dto.BoardFileDto;
 import board.service.BoardService;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.net.URLEncoder;
-import java.util.List;
 
 @Controller
 public class RestBoardController {
