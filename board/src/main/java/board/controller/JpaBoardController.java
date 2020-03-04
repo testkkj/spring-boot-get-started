@@ -1,7 +1,11 @@
 package board.controller;
 
+import java.net.URLEncoder;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.jni.File;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import board.common.FileUtils;
 import board.entity.JpaBoard;
 import board.entity.JpaBoardFile;
 
@@ -63,18 +68,16 @@ public class JpaBoardController{
     }
 
     @RequestMapping(value = "jpa/board/file", method = RequestMethod.GET)
-    public void downloadBoardFile(@RequestParam int idx, @RequestParam int boardIdx, HttpServletResponse response)
+    public void downloadBoardFile(int boardIdx, int idx, HttpServletResponse response)
             throws Exception {
         JpaBoardFile jpaBoardFile = jpaBoardFile.selectBoardFileInformation(boardIdx, idx);
-        if (ObjectUtils.isEmpty(boardFile) == false) {
-            String fileName = boardFile.getOriginalFileName();
-
-            byte[] files = FileUtils.readFileToByteArray(new File(boardFile.getStoredFilePath()));
+        
+            byte[] files = FileUtils.readFileToByteArray(new File(files.getStoredFilePath()));
 
             response.setContentType("application/octet-stream");
             response.setContentLength(files.length);
             response.setHeader("Content-Disposition",
-                    "attachment; fileName=\"" + URLEncoder.encode(fileName, "UTF-8") + "\";");
+                    "attachment; fileName=\"" + URLEncoder.encode(jpaBoardFile.getOriginalFileName(), "UTF-8") + "\";");
             response.setHeader("Content-Transfer-Encoding", "binary");
 
             response.getOutputStream().write(files);
