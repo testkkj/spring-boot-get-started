@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import board.common.FileUtils;
 import board.entity.JpaBoard;
 import board.entity.JpaBoardFile;
+import board.service.JpaBoardService;
 
 @Controller
 public class JpaBoardController{
@@ -41,7 +42,7 @@ public class JpaBoardController{
 
     @RequestMapping(value = "/jpa/board", method = RequestMethod.POST)
     public String writeBoard(JpaBoard jpaBoard, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception{
-        jpaBoardService.saveBoard(jpaBoard, multipartHttpServletRequest);
+        JpaBoardService.saveBoard(jpaBoard, multipartHttpServletRequest);
         return "redirect:/jpa/board";
     }
 
