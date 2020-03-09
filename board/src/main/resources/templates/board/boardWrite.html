@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns="http://www.thymeleaf.org">
-
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>board</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../css/style.css">
+	<meta charset="UTF-8">
+	<title>board</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
-
 <body>
-    <div class="container">
-        <h2>게시판 등록</h2>
-        <form id="frm" name="frm" action="/board/insertBoard.do" method="post" enctype="multipart/form-data">
-            <table class="board_detail">
-                <tr>
-                    <td>제목</td>
-                    <td><input type="text" name="title" id="title"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <textarea name="contents" id="contents"></textarea>
-                    </td>
-                </tr>
-            </table>
-            <input type="file" name="file" id="file" multiple="multiple">
-            <input type="submit" value="저장" id="submit" class="btn">
-        </form>
+	<div class="container">
+	    <h2>게시글 등록</h2>
+	    <form id="frm" name="frm" method="post" action="/board/insertBoard.do" enctype="multipart/form-data">
+	    	<table class="board_detail">
+	    		<tr>
+	    			<td>제목</td>
+	    			<td><input type="text" id="title" name="title"/></td>
+	    		</tr>
+	    		<tr>
+	    			<td colspan="2">
+		    			<textarea id="contents" name="contents"></textarea>
+	    			</td>
+	    		</tr>
+	    	</table>
+	    	<input type="file" id="files" name="files" multiple="multiple">
+	    	<input type="submit" id="submit" value="저장" class="btn">
+	    </form>
     </div>
 </body>
-
 </html>

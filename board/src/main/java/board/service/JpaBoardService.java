@@ -4,18 +4,18 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.entity.JpaBoard;
-import board.entity.JpaBoardFile;
+import board.entity.BoardEntity;
+import board.entity.BoardFileEntity;
 
 public interface JpaBoardService {
 
-    List<JpaBoard> selectBoardList() throws Exception;
+	List<BoardEntity> selectBoardList() throws Exception;
 
-    void saveBoard(JpaBoard jpaBoard, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception;
+	void saveBoard(BoardEntity board, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception;
+	
+	BoardEntity selectBoardDetail(int boardIdx) throws Exception;
 
-    JpaBoard selectBoardDetail(int boardIdx, int idx) throws Exception;
+	void deleteBoard(int boardIdx);
 
-    void deleteBoard(int boardIdx);
-
-    JpaBoardFile selectBoardFileInformation(int boardIdx, int idx) throws Exception;
+	BoardFileEntity selectBoardFileInformation(int boardIdx, int idx) throws Exception;
 }
