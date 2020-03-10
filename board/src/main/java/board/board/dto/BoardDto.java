@@ -1,4 +1,4 @@
-package board.dto;
+package board.board.dto;
 
 import java.util.List;
 

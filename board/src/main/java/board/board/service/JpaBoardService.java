@@ -1,11 +1,11 @@
-package board.service;
+package board.board.service;
 
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.entity.BoardEntity;
-import board.entity.BoardFileEntity;
+import board.board.entity.BoardEntity;
+import board.board.entity.BoardFileEntity;
 
 public interface JpaBoardService {
 

@@ -1,4 +1,4 @@
-package board.controller;
+package board.board.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import board.dto.BoardDto;
-import board.service.BoardService;
+import board.board.dto.BoardDto;
+import board.board.service.BoardService;
 
 @RestController
 public class RestBoardApiController {

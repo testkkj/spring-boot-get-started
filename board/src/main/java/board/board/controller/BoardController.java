@@ -1,4 +1,4 @@
-package board.controller;
+package board.board.controller;
 
 import java.io.File;
 import java.net.URLEncoder;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import board.dto.BoardDto;
-import board.dto.BoardFileDto;
-import board.service.BoardService;
+import board.board.dto.BoardDto;
+import board.board.dto.BoardFileDto;
+import board.board.service.BoardService;
 
 @Controller
 public class BoardController {

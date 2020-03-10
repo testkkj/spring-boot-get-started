@@ -12,8 +12,8 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.dto.BoardFileDto;
-import board.entity.BoardFileEntity;
+import board.board.dto.BoardFileDto;
+import board.board.entity.BoardFileEntity;
 
 @Component
 public class FileUtils {

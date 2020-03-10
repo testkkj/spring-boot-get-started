@@ -1,4 +1,4 @@
-package board.service;
+package board.board.service;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.dto.BoardDto;
-import board.dto.BoardFileDto;
-import board.mapper.BoardMapper;
+import board.board.dto.BoardDto;
+import board.board.dto.BoardFileDto;
+import board.board.mapper.BoardMapper;
 import board.common.FileUtils;
 
 @Service

@@ -1,11 +1,11 @@
-package board.service;
+package board.board.service;
 
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.dto.BoardDto;
-import board.dto.BoardFileDto;
+import board.board.dto.BoardDto;
+import board.board.dto.BoardFileDto;
 
 public interface BoardService {
 	

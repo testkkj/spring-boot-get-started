@@ -1,4 +1,4 @@
-package board.service;
+package board.board.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import board.entity.BoardEntity;
-import board.entity.BoardFileEntity;
-import board.repository.JpaBoardRepository;
+import board.board.entity.BoardEntity;
+import board.board.entity.BoardFileEntity;
+import board.board.repository.JpaBoardRepository;
 import board.common.FileUtils;
 
 @Service

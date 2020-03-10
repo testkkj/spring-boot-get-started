@@ -1,4 +1,4 @@
-package board.controller;
+package board.board.controller;
 
 import java.io.File;
 import java.net.URLEncoder;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import board.entity.BoardEntity;
-import board.entity.BoardFileEntity;
-import board.service.JpaBoardService;
+import board.board.entity.BoardEntity;
+import board.board.entity.BoardFileEntity;
+import board.board.service.JpaBoardService;
 
 @Controller
 public class JpaBoardController {
