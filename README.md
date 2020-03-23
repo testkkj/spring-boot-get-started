@@ -14,3 +14,7 @@ SERVER: GCP
 OS: centos7   
 DB: mysql 5.7   
 JDK: jdk8   
+**********   
+## 진행 상황   
+GCP의 centos7기반의 서버 구축중   
+mysql, jdk, tomcat 설치 구동 확인   
