@@ -18,3 +18,6 @@ JDK: jdk8
 ## 진행 상황   
 GCP의 centos7기반의 서버 구축중   
 mysql, jdk, tomcat 설치 구동 확인   
+jenkins 설치 구동 확인   
+* bitbucket, gradle 설치 구동 확인
+* jenkins admin 페이지 확인
